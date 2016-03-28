@@ -38,7 +38,9 @@ var AppView = Backbone.View.extend({
 
   events: {
     'click form input': 'handleClick'
+
   },
+
 
   handleClick: function(e) {
     var field = $(e.target).val();
@@ -67,6 +69,7 @@ var MovieView = Backbone.View.extend({
 
   initialize: function() {
     // your code here
+    this.model.on('change', this.render, this);
   },
 
   events: {
