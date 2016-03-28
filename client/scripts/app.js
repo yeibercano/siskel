@@ -21,6 +21,7 @@ var Movies = Backbone.Collection.extend({
 
   initialize: function() {
     // your code here
+    this.on('change', function(){this.sort()})
   },
 
   comparator: 'title',
